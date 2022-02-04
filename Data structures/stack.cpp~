@@ -1,0 +1,50 @@
+#include <iostream>
+
+using namespace std;
+
+int *stack;
+int stack_size;
+int stack_idx=0;
+
+void push(int x)
+{
+  if (stack_idx==stack_size)
+    {
+      cout<<"\nOverflow";
+    }
+  else
+    {
+      stack[stack_idx++]=x;
+    }
+}
+
+void pop()
+{
+  if (stack_idx==0)
+    {
+      cout<<"\nUnderflow";
+    }
+  else
+    {
+      cout<<"\n"<<stack[--stack_idx]<<"deleted";
+    }
+}
+
+void show()
+{
+  int i;
+  for (i=0; i<stack_idx; i++)
+     {
+       cout<<stack[i]<<"\n";
+     }		
+}
+  
+  // void topmost()
+    
+
+int main(int argc, char *argv[])
+{
+  return 0;
+}
+
+//<>

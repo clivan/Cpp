@@ -1,0 +1,54 @@
+#include <iostream>
+
+using namespace std;
+
+int queue[10];
+int front=0;
+int rear=0;
+
+void Enque(int x)
+{
+  if (rear==10)
+    {
+      cout<<"\nOverflow";
+    }
+  else
+    {
+      queque[rear++]=x;
+    }
+}
+
+void Deque()
+{
+  if (fron==rear)
+    {
+      cout<<"\nUnderflow";
+    }
+  else
+    {
+      cout<<"\n"<<queue[front++]<<" deleted";
+      for (int i=front; i<rear; i++)
+	{
+	  queue[i-front]=queue[i];
+	}
+      rear=rear-front;
+      front=0;		  
+    }
+}
+
+void show()
+{
+  for (int i=front; i<rear; i++)
+		      {
+			cout<<[i]<<"\t";
+		      }
+}
+
+
+
+int main(int argc, char *argv[])
+{
+  return 0;
+}
+
+<>
